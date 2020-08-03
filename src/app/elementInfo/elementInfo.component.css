@@ -1,0 +1,148 @@
+.example-container1 {
+    height: 190px;
+    overflow: auto;
+  }
+
+  .example-container2 {
+    height: 200px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+    font-weight: normal;
+    background-color: white;
+    
+  }
+  
+.mat-cell {
+  color: black;
+  font-size: 3.5mm;
+  text-align: left;
+  border-bottom:  1px solid lightgrey;
+  padding-right: 3mm;
+
+}
+
+
+.mat-header-cell{
+  color: black;
+  font-size: 4mm;
+  font-weight: bold;
+  text-align: left;
+  z-index: 0;
+ 
+}
+
+.mat-header-row {
+  height: 25px !important;
+}
+
+.mat-row{
+  height: 40px !important;
+ 
+}
+
+.mat-row:nth-child(odd) {
+  height: 40px !important;
+  background-color: whitesmoke;
+  
+}
+p{
+  text-align: center;
+  text-justify: center;
+  color: black;
+  font-size: 5mm;
+ }
+
+.warper {
+  border: outset;
+  position: sticky;
+  background-color: lightblue;
+  height: 20px;
+  padding-top: 2mm;
+  padding-bottom: 2mm;
+  align-items:  center;
+  justify-items: center ;
+  text-align: center;
+  text-justify: center;
+  font-size: 5mm;
+}
+
+.mat-mini-fab {
+ /* background-color: rgb(179, 229, 241);
+   color: black;*/
+   text-justify: center;
+   text-align: center;
+ 
+}
+
+.test{
+  border: hidden;
+  position: sticky;
+  background-color: lightgrey;
+  line-height: 1mm;
+  margin-right: 1mm;
+  margin-left: 1mm;
+  height: 15px;
+  padding: 3mm;
+  text-align: center;
+  text-justify: center;
+  
+}
+
+@media screen and (max-width: 39.9375em){
+
+  p{
+    text-align: center;
+    text-justify: center;
+    color: black;
+    font-size: 4mm;
+   }
+
+   .mat-header-cell{
+    color: black;
+    font-size: 3.5mm;
+    font-weight: bold;
+    text-align: left;
+    z-index: 0;
+   
+  }
+  .mat-cell {
+    color: black;
+    font-size: 3.5mm;
+    text-align: left;
+    border-bottom:  1px solid lightgrey;
+    padding-right: 3mm;
+  
+  }
+
+  .test{
+    border: hidden;
+    position: sticky;
+    background-color: lightgrey;
+    line-height: 5mm;
+    margin-right: 1mm;
+    margin-left: 1mm;
+    height: 35px;
+    padding: 3mm;
+    text-align: center;
+    text-justify: center;
+    font-size: 4mm;
+        
+  }
+
+  .warper {
+    border: outset;
+    position: sticky;
+    background-color: lightblue;
+    height: 20px;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+    align-items:  center;
+    justify-items: center ;
+    text-align: center;
+    text-justify: center;
+    font-size: 4mm;
+  }
+ }

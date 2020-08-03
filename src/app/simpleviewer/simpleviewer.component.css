@@ -1,0 +1,141 @@
+.black {
+    border: 1px transparent black ;
+    background:white;
+    padding: 0.5em;
+    height:450px
+    }
+
+mat-slider {
+        width: 100px;
+     }  
+
+.label
+{
+ border: groove;
+  background-color: lightblue;
+  height: auto;
+  padding: 2mm;
+  margin-top: 0px;
+  display: inline-grid;
+  grid-template-rows: 20px ;
+  grid-template-columns: repeat(16, auto) ;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 0px 2px;
+ }
+  /* to manipulate the buttom  */  
+  button {
+      
+        height: auto;
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        width: auto;
+    }
+
+    .logo{
+        width:auto;
+        height:400px;
+    }
+
+    @media screen and (max-width: 39.9375em){
+
+        .black {
+            border: 1px transparent black ;
+            background:grey;
+            padding: 0.5em;
+            height:393px;
+            width:290px;
+            background-image: url(F:\Data laptop\Desktop\Front-end\src\assets\bimphone.png);
+            }
+
+            .logo{
+                display: none;
+                }
+
+        
+        mat-slider {
+                width: 100px;
+             }  
+        
+        .label
+        {
+         border: groove;
+          background-color: lightblue;
+          height: auto;
+          width: 300px;
+          padding: 1mm;
+          margin-top: 0px;
+          display: grid;
+          grid-template-rows: 25px 30px 45px;
+          grid-template-columns: 40px auto 30px 30px 30px ;
+        
+          grid-gap: 0px 2px;
+          grid-template-areas: 
+          "title1 title1 title1 title1 title1"
+          "SH SH SH SH SH"
+          "title2 slider b11 b12 b13";
+         }
+
+         #title1 {
+            grid-area: title1;  
+            justify-self:start ;    
+            align-self: center;  
+            
+          }
+
+          #title2 {
+            grid-area: title2;  
+            justify-self:start ;    
+            align-self: center; 
+                 
+          }
+        
+        #SH {
+            grid-area:SH;
+            justify-self:center ;    
+            align-self: center; 
+            }
+
+         #b11 {
+            grid-area: b11;  
+            justify-self:start ;    
+            align-self: center; 
+                   
+          }
+
+          #b12 {
+            grid-area: b12;  
+            justify-self:stretch ;    
+            align-self: center;     
+         
+
+          }
+
+          #b13 {
+            grid-area: b13; 
+            justify-self:stretch ;    
+            align-self: center;   
+                  
+          }
+
+          #slider{
+              grid-area:slider;
+             
+          }
+
+          /* to manipulate the buttom  */  
+          button {
+              
+                height: auto;
+                padding: 0;
+                margin: 0;
+                align-self: center;
+                width: auto ;
+            }
+
+            .picbutton {
+                height: 25px ;
+                width: 25px;
+            }
+    }

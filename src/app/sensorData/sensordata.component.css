@@ -1,0 +1,175 @@
+.containerStatus {
+  border: outset;
+  background-color: lightblue;
+  height: 20px;
+  padding: 2mm;
+  margin-top: 0px;
+}
+.boxtext{
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+    height: 10px;
+    width: 100px ;
+    padding: 2mm;
+    margin-top: 0px;
+    text-justify: right;
+}
+
+.logo{
+    border: 1px transparent black;
+    background-color:white;
+    height: 300px;
+    width: 400px;
+    padding: 0mm;
+    margin-top: 0px;
+    text-justify: center;
+}
+
+.graph {
+    display: grid;
+    grid-template-rows: 100px auto auto auto;
+    grid-template-columns:500px auto auto;
+    column-gap: 0px ;
+    row-gap:0px;
+    grid-template-areas:
+    "i01 i03 i05"
+    "p02 p04 p06"
+    "i07 i07 i07"
+    "p08 p08 p08"
+   }
+   
+  #i01 {
+    grid-area: i01;
+    justify-self: stretch;
+    align-self: stretch;
+   }
+
+   #i03 {
+    grid-area: i03;
+    justify-self: stretch;
+    align-self: stretch;
+   }
+
+   #i05 {
+    grid-area: i05;
+    justify-self: stretch;
+    align-self: stretch;
+   }
+   #i07 {
+    grid-area: i07;
+    justify-self: stretch;
+    align-self: stretch;
+   }
+   #p02 {
+    grid-area: p02;
+    justify-self: stretch;
+    align-self: stretch;
+   }
+   #p04 {
+    grid-area: p04;
+    justify-self: center;
+    align-self: center;
+   }
+   #p06 {
+    grid-area: p06;
+    justify-self: stretch;
+    align-self: stretch;
+   }
+   #p08 {
+    grid-area: p08;
+    justify-self: stretch;
+    align-self: stretch;
+   }
+   
+   @media screen and (max-width: 39.9375em){
+    .graph {
+      display: grid;
+      grid-template-rows: repeat(8, auto);
+      grid-template-columns:300px ;
+      column-gap: 0px ;
+      row-gap:0px;
+      grid-template-areas:
+      "p02"
+      "p02"
+      "i03"
+      "p04"
+      "i05"
+      "p06"
+      "i07"
+      "p08"
+     }
+     
+    #i01 {
+      grid-area: i01;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+  
+     #i03 {
+      grid-area: i03;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+  
+     #i05 {
+      grid-area: i05;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+     #i07 {
+      grid-area: i07;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+     #p02 {
+      grid-area: p02;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+     #p04 {
+      grid-area: p04;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+     #p06 {
+      grid-area: p06;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+     #p08 {
+      grid-area: p08;
+      justify-self: stretch;
+      align-self: stretch;
+     }
+     
+     .logo{
+      border: 1px transparent black;
+      background-color:white;
+      height: 200px;
+      width: 300px ;
+      padding: 0mm;
+      margin-top: 0px;
+      text-justify: center;
+  }
+  
+  .boxtext{
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+    height: 10px;
+    width: 80px ;
+    padding: 2mm;
+    margin-top: 0px;
+    text-justify: center;
+    font-size: 3mm;
+}
+
+.containerStatus {
+  border: groove;
+  background-color: lightblue;
+  height: 15px;
+  width: 290px;
+  padding: 2mm;
+  margin-top: 0px;
+}
+
+ }

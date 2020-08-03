@@ -1,0 +1,87 @@
+<div class="warper">
+  Element information  
+</div>
+<p>
+  {{displayedData[0].o.value.split("#").pop()}} 
+  <button mat-mini-fab color= "primary" (click)= "goBack (displayedData)" [disabled]="isActive">
+    <mat-icon >arrow_back</mat-icon>
+  </button>
+</p>
+
+<div class="example-container1 mat-elevation-z0">
+    
+      <table mat-table [dataSource]="displayedData | triplefilter">
+     
+          <!--Property Column --> 
+      <ng-container matColumnDef="property">
+        <th mat-header-cell *matHeaderCellDef> Property </th>
+        <td mat-cell *matCellDef="let element "> {{element.p.value.split("#").pop()}}</td>
+     </ng-container>
+  
+     <!-- Value Column--> 
+       <ng-container matColumnDef="value">
+        <th mat-header-cell *matHeaderCellDef> Value </th>
+        <td mat-cell *matCellDef="let element "> {{element.o.value.split("/").pop()}} </td>
+       </ng-container>
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+<div class="test">
+   <form ngForm>
+      <label> in this element:     (filter) </label> 
+      <input type="text" [(ngModel)]= "term" name= "filter"  placeholder=""/>
+    </form>
+  </div>
+
+  <div class="example-container2 mat-elevation-z0">
+    <table mat-table matSort [dataSource]="displayedData | containfilter | filterpipe:term ">
+   
+      <!--  Property Column -->
+    <ng-container matColumnDef="property">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element ">  {{element.p.value.split("#").pop()}}</td>
+   </ng-container>
+
+   <!-- Value Column -->
+     <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef ></th>
+      <td mat-cell *matCellDef="let element "> 
+        <button mat-button color= "primary" (click)= "updateData (element)" style="text-decoration: underline" >
+          {{element.o.value.split("/").pop().split("_", 1)}} ({{element.o.value.split("/").pop().split("_").pop()}}) 
+        </button> </td>
+     </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+ 
+
+</div>
+
+ 
+ 
+<!-- 
+
+  [class.mat-elevation-z2]="isActive"
+<table style="width:10%">
+    <tr >
+      <th>property</th>
+      <th>value</th>
+    </tr>
+    <tr class="x" *ngFor = "let f of datab | triplefilter">
+      <td>{{f.p.value.split("#").pop()}}</td>
+      <td>{{f.o.value.split("#").pop()}}</td>
+    </tr>
+    <tr class="x" *ngFor = "let f of datab | containfilter">
+      <td>{{f.p.value.split("#").pop()}}</td>
+      <td><button (click)= "updateData (f)" >Go to</button>{{f.o.value.split("#").pop()}}</td>
+    </tr>
+  </table> -->
+
+
+  
