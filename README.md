@@ -15,6 +15,6 @@ The app has the following Prerequisites:
 
 ## Initiate App 
 
-•	In `Building-OM-center/src/app/service.ts` make the path `http://localhost:7200/repositories/05/` match the repository created in graphDB.
+•	In `Building-OM-center/src/app/service.ts`, the URL `http://localhost:7200/repositories/05/` must match the repository path created in graphDB.
 
 •	Run `ng serve` in Angular CLI for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
