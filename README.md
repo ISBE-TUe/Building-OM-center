@@ -8,10 +8,13 @@ The sample files are located in `Building-OM-center/Data/Atlas_8_floor_sensor.tt
 The app has the following Prerequisites:
 
 •	Install node.js and the npm package manager.
+
 •	Install the Angular CLI, This project was generated with Angular CLI version 9.1.0. 
+
 •	Install Ontotext GraphDB, create a repository and include the `.ttl` file located in the `Data` folder.
 
 ## Initiate App 
 
 •	In `Building-OM-center/src/app/service.ts` make the path `http://localhost:7200/repositories/05/` match the repository created in graphDB.
+
 •	Run `ng serve` in Angular CLI for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
