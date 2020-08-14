@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { DataB } from '../DataB';
-//import { MatPaginator } from '@angular/material/paginator';
-//import { MatSort } from '@angular/material/sort';
+
 
 
 
@@ -32,7 +31,6 @@ export class ElementInfoComponent implements OnInit {
   displayedColumns = ['property', 'value'];
  
   isActive = true;
- // text = '';
   term:string;
 
 

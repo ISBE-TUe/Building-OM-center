@@ -46,9 +46,11 @@ mat-slider {
             padding: 0.5em;
             height:393px;
             width:290px;
-            background-image: url(F:\Data laptop\Desktop\Front-end\src\assets\bimphone.png);
-            }
+            background-image: url(../../assets/bimphone.png);
+             
+          }
 
+ 
             .logo{
                 display: none;
                 }

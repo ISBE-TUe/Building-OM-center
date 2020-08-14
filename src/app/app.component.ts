@@ -52,7 +52,6 @@ export class AppComponent {
     {
       this.displayedData = data
     } 
-    console.log(this.displayedData[1].o.value);
   }
 
   
@@ -84,9 +83,9 @@ export class AppComponent {
     .subscribe(
           (response) => {
           this.space = JSON.parse (response)
-         //console.log(this.data2)
+         //console.log(this.space)
           this.spaceb = this.space.results.bindings
-          //console.log(this.datab2)
+          //console.log(this.spaceb)
           });
     
     }
@@ -96,9 +95,9 @@ export class AppComponent {
       .subscribe(
             (response) => {
             this.storey9 = JSON.parse (response)
-           //console.log(this.data3)
+           //console.log(this.storey9)
             this.storey9b = this.storey9.results.bindings
-           // console.log(this.datab3)
+           // console.log(this.storey9)
             });
       
       }
@@ -107,9 +106,9 @@ export class AppComponent {
       .subscribe(
             (response) => {
             this.storey8 = JSON.parse (response)
-           //console.log(this.data4)
+           //console.log(this.storey8)
             this.storey8b = this.storey8.results.bindings
-           // console.log(this.datab4)
+           // console.log(this.storey8)
             });
       
       }

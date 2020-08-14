@@ -11,22 +11,7 @@ import { MessageService } from './message.service';
 })
 export class Service {
   
-  private heroesUrl = 'http://localhost:7200/repositories/02?query=ask%20%7B%3Chttps://www.ugent.be/myAwesomeFirstBIMProject%23building_00dd6c87-6a6e-f482-7490-e6613659708a%3E%20?p%20?o%7D';  // URL to web api
-  private heroesUrl1 = 'http://localhost:7200/repositories/02?query=construct%20%7B%3Chttps://w3id.org/product/BuildingElements%23Slab%3E%20?p%20?o%7D%20where%20%7B?s%20?p%20?o%7D';
-
-  private heroesUrl2 = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23space_15c75cfb-4a4e-404f-812a-77c1d3c20375%3E%20%3Fp%20%3Fo%7D';
-
-  private heroesUrl3 ='http://localhost:7200/repositories/03?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2Fspace_1533%3E%20%3Fp%20%3Fo%7D%0A%0A%0A';
-  private dbUrl = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23buildingelementproxy_11aa13e4-f1bd-498e-bbda-cd90469ff87b%3E%20%3Fp%20%3Fo%7D';
-
-  private Urlbuild = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23building_90b511b9-b7c0-465c-8e11-4a4033650f21%3E%20%3Fp%20%3Fo%7D';
- private Urlstoreya = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23storey_90b511b9-b7c0-465c-8e11-4a40cc9af266%3E%20%3Fp%20%3Fo%7D';
- private Urlstoreyb = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23storey_90b511b9-b7c0-465c-8e11-4a40cc9af1e7%3E%20%3Fp%20%3Fo%7D';
- private Urllight1 = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23lightfixture_11aa13e4-f1bd-498e-bbda-cd90469ff87d%3E%20%3Fp%20%3Fo%7D'; 
- private Urllight2 = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23lightfixture_11aa13e4-f1bd-498e-bbda-cd90469ff87a%3E%20%3Fp%20%3Fo%7D';
- private Urllight3 = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23lightfixture_11aa13e4-f1bd-498e-bbda-cd90469ff87c%3E%20%3Fp%20%3Fo%7D';
- private Urlsensor = 'http://localhost:7200/repositories/02?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttps%3A%2F%2Fwww.ugent.be%2FmyAwesomeFirstBIMProject%23buildingelementproxy_11aa13e4-f1bd-498e-bbda-cd90469ff87b%3E%20%3Fp%20%3Fo%7D';
-
+ 
  private Urlbuild1 = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2Fbuilding_134%3E%20%3Fp%20%3Fo%7D';
  private Urlstorey8 = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2Fstorey_147%3E%20%3Fp%20%3Fo%7D';
  private Urlstorey9 = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2Fstorey_153%3E%20%3Fp%20%3Fo%7D';
@@ -34,7 +19,7 @@ export class Service {
  private Urllight21 = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2FlightFixture_250266%3E%20%3Fp%20%3Fo%7D';
  private Urllight31 = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2FlightFixture_250418%3E%20%3Fp%20%3Fo%7D';
  private Urlsensor1 = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2Fsensor_250195%3E%20%3Fp%20%3Fo%7D';
- private UrlSpace = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2Fspace_9832%3E%20%3Fp%20%3Fo%7D';
+ private UrlSpace = 'http://localhost:7200/repositories/05?query=select%20%3Fo%20%3Fp%20where%20%7B%3Chttp%3A%2F%2Flinkedbuildingdata.net%2Fifc%2Fresources20200408_172328%2Fspace_9832%3E%20%3Fp%20%3Fo%7D'; 
 
 
 
@@ -142,7 +127,7 @@ export class Service {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a Service message with the MessageService */
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
   }

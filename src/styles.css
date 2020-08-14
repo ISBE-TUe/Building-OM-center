@@ -108,13 +108,3 @@ h4 {
   }
 
 
-   /* .black {
-      display:grid;
-      grid-template-columns: 20% 80%;
-      grid-column-gap:1em;
-      grid-row-gap: 1em;
-      justify-items: stretch;
-    }*/
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
