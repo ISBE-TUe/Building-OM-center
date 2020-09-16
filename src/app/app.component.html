@@ -3,9 +3,7 @@
 <h4>
 
     <div class="container mat-elevation-z2" id="element_info">
-        <app-elementInfo [buildb] = "buildb"  [spaceb] = "spaceb" [storey9b] = "storey9b" 
-        [storey8b] = "storey8b" [defb] = "defb" [light_1b] = "light_1b" [light_2b] = "light_2b" 
-        [light_3b] = "light_3b" [sensorb] = "sensorb" (outputoParent)="updateDisplayedData($event)"></app-elementInfo>
+        <app-elementInfo (outputoParent)="updateDisplayedData($event)"></app-elementInfo>
    </div>
 
     <div class="container" id="bim_viewer">
