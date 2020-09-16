@@ -22,8 +22,10 @@ export class SensordataComponent implements OnInit, OnChanges {
   arr_maxKW=[];
   arr_minKW=[];
   arr_startAccKWH=[];
-  test = [];
   chart;
+  locationID: String;
+  sensorID;
+  
   @Input('displayedData') displayedData: DataB[] ;
  
   
@@ -36,11 +38,13 @@ export class SensordataComponent implements OnInit, OnChanges {
   
   ngOnChanges() {
 
- if ( this.arr_avgKW !== [] && this.displayedData[1].o.value == '15c75cfb-4a4e-404f-812a-77c1d3c20375' || this.displayedData[4].o.value == '11aa13e4-f1bd-498e-bbda-cd90469ff87b')   
- {this.makeGraph(this.arr, this.arr_fromDateTime, 
-    this.arr_toDateTime, this.arr_avgKW, this.arr_endAccKWH,this.arr_maxKW,
-    this.arr_minKW, this.arr_startAccKWH)} else if (this.chart !== undefined)
-        {this.cleanChart()}
+   if (this.displayedData !== undefined) {
+    for (let i=0; i<this.displayedData.length; i++) {
+      if (this.displayedData[i].p.value =='https://w3id.org/props#sensorID') {this.sensorID = this.displayedData[i].o.value;
+       if (this.sensorID == this.locationID)
+      {this.makeGraph(this.arr, this.arr_fromDateTime, 
+      this.arr_toDateTime, this.arr_avgKW, this.arr_endAccKWH,this.arr_maxKW,
+      this.arr_minKW, this.arr_startAccKWH)}}  else if (this.chart !== undefined) {this.cleanChart()}
   }
 
   loadXML() {
@@ -56,9 +60,18 @@ export class SensordataComponent implements OnInit, OnChanges {
   .subscribe((data) => {
     var parser = new DOMParser();
      this.xmlItems=parser.parseFromString (data, 'text/xml');
+     this.getSensorID(this.xmlItems);
      this.buildArray(this.xmlItems);
       
           });
+  };
+     
+  getSensorID(x) {
+    let LocationID = x.getElementsByTagName('locationID');
+    for (let i=0; i<LocationID.length; i++) {
+       this.locationID = LocationID[i].innerHTML;
+  }
+    
   };
 
   buildArray(x) {
